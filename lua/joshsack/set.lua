@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader>x", ":nohlsearch<CR>")
 -- Match my obsidian settings for H, L 
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
+
+-- Set it so that leader tab will switch between buffers
+vim.keymap.set("n", "<leader>a", ":bnext<CR>")
+vim.keymap.set("n", "<leader>s", ":bprev<CR>")
