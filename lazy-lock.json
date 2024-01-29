@@ -1,5 +1,6 @@
 {
   "ChatGPT.nvim": { "branch": "main", "commit": "48c59167beeb6ee0caa501c46cecc97b9be8571d" },
+  "CopilotChat.nvim": { "branch": "main", "commit": "b250ac3a5289f2df6c2736faf8a67cbb44d47969" },
   "JuliaFormatter.vim": { "branch": "main", "commit": "d3848acc19fb93283a31ff5977a7b4e26c0f8559" },
   "alpha-nvim": { "branch": "main", "commit": "29074eeb869a6cbac9ce1fbbd04f5f5940311b32" },
   "cmp-cmdline": { "branch": "main", "commit": "8ee981b4a91f536f52add291594e89fb6645e451" },
