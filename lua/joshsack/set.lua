@@ -27,3 +27,8 @@ vim.keymap.set("n", "L", "$")
 -- Set it so that leader tab will switch between buffers
 vim.keymap.set("n", "<leader>a", ":bnext<CR>")
 vim.keymap.set("n", "<leader>s", ":bprev<CR>")
+
+-- Require transparent background
+vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+
