@@ -19,6 +19,8 @@ vim.opt.swapfile = false
 
 -- Set leader x to unhighlight search results
 vim.keymap.set("n", "<leader>x", ":nohlsearch<CR>")
+-- Set leader dn to dismiss noice notifications
+vim.keymap.set("n", "<leader>dn", "<cmd>NoiceDismiss<CR>", {desc = "Dismiss noice notifications"})
 
 -- Match my obsidian settings for H, L 
 vim.keymap.set("n", "H", "^")
