@@ -113,5 +113,7 @@ return {
         -- must have cursor on title
         vim.keymap.set("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>")
         vim.keymap.set("n", "<leader>ok", ":!mv '%:p' /Users/joshsack/library/Mobile\\ Documents/iCloud~md~obsidian/Documents/Zettlekasten/Review<cr>:bd<cr>")
+        vim.keymap.set("n", "<leader>mc", ":ObsidianToggleCheckbox<CR>")
+        vim.keymap.set({"n", "i", "v"}, "<C-b>", ":ObsidianBacklinks<CR>")
     end
 }
