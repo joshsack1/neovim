@@ -1,7 +1,8 @@
 return {
     "jpalardy/vim-slime",
     config = function ()
-        vim.g.slime_target = "tmux"
+        -- vim.g.slime_target = "tmux"
+        vim.g.slime_target = "wezterm"
         vim.cmd[[
         let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
         ]]
