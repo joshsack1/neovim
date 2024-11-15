@@ -10,7 +10,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd", "julials", "texlab", "r_language_server" },
+                ensure_installed = { "lua_ls", "clangd", "julials", "texlab", "r_language_server", "marksman" },
             })
         end,
     },
@@ -19,6 +19,7 @@ return {
         lazy = false,
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            local util = require("lspconfig.util")
 
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({
@@ -35,6 +36,11 @@ return {
             })
             lspconfig.r_language_server.setup({
                 capabilities = capabilities
+            })
+            lspconfig.marksman.setup({
+                capabilities = capabilities,
+                filetypes = {"markdown", "quarto"},
+                root_dir = util.root_pattern('.git', '.marksman.toml', '_quarto.yml')
             })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
