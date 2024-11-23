@@ -5,7 +5,17 @@ return {
     },
     config = function ()
         require("quarto").setup({
-            -- your configuration comes here
+            lspFeatures = {
+                enabled = true,
+                langauges = {'r', 'python', 'julia', 'lua'},
+                diagnostics = {
+                    enabled = true,
+                    triggers = { "BufWrite" },
+                },
+                completion = {
+                    enabled = true,
+                }
+            }
         })
     end
 }
